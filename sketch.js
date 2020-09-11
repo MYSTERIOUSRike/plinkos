@@ -47,6 +47,7 @@ function setup() {
 function draw() {
   
   background(0);  
+  Engine.update(engine)
 
   ground1.display();
   
@@ -66,7 +67,7 @@ function draw() {
     plinkos[p3].display();
   }
 
-  if(frameCount%60===0){
+  if(frameCount%30===0){
     particles.push(new particle(random(width/2-10,width/2+10),10,10));
    }
 
